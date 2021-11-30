@@ -10,8 +10,9 @@ import { Avatar, IconButton } from '@material-ui/core'
 import classes from '../styles/chatScreen.module.css'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
 import AttachFileIcon from '@material-ui/icons/AttachFile'
-import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
-import MicIcon from '@material-ui/icons/Mic';
+import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon'
+import MicIcon from '@material-ui/icons/Mic'
+import SendIcon from '@material-ui/icons/Send'
 // components
 import Message from '../components/Message'
 import getRecipientEmail from '../utils/getRecipientEmail'
@@ -118,7 +119,7 @@ function ChatScreen({chat, messages}) {
 			<form className={classes.InputContainer}>
 				<InsertEmoticonIcon />
 				<input className={classes.input} value={input} onChange={ e => setInput(e.target.value)} />
-				<button hidden disabled={!input} type="submit" onClick={sendMessage}>send message</button>
+				<button disabled={!input} type="submit" onClick={sendMessage} className={classes.sendButton}>send <SendIcon /></button>
 				<MicIcon />
 			</form>
 			
