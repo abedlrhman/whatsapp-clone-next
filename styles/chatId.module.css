@@ -1,0 +1,16 @@
+.container{
+	display: flex;
+}
+
+.chatContainer{
+	flex: 1;
+	overflow: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	height: 100vh;
+
+}
+
+.chatContainer::-webkit-scrollbar {
+	display: none;
+}
